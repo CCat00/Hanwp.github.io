@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-11T05:43:08.000Z</updated>
+  <updated>2016-11-11T05:54:46.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>11.11</title>
-    <link href="http://yoursite.com/2016/11/11/11-11/"/>
-    <id>http://yoursite.com/2016/11/11/11-11/</id>
-    <published>2016-11-11T05:38:38.000Z</published>
-    <updated>2016-11-11T05:43:08.000Z</updated>
+    <link href="http://yoursite.com/2016/11/10/11-11/"/>
+    <id>http://yoursite.com/2016/11/10/11-11/</id>
+    <published>2016-11-10T05:38:00.000Z</published>
+    <updated>2016-11-11T05:54:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>hhhhhh—-11111</p>
 ]]></content>
