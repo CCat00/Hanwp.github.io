@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>灭神的技术博客</title>
+  <title>灭God的技术博客</title>
   <subtitle>记录成长的脚步。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>http://hanwp.github.io/</id>
   
   <author>
-    <name>灭神</name>
+    <name>灭God</name>
     
   </author>
   
