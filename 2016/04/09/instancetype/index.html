@@ -88,20 +88,20 @@
 
 <meta name="description" content="本文章翻译自官方文档
 
-使用instancetype关键字作为方法的返回值，能够返回一个类的实例。比如alloc,init等方法。在一个合适的地方使用instancetype取代id将使你的代码更加安全。看下下面的代码：12345678910111213141516@interface MyObject : NSObject+ (instancetype)factoryMethodA;+ (id">
+使用instancetype关键字作为方法的返回值，能够返回一个类的实例。比如alloc,init等方法。在一个合适的地方使用instancetype取代id将使你的代码更加安全。看下下面的代码：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="instancetype">
 <meta property="og:url" content="http://hanwp.github.io/2016/04/09/instancetype/index.html">
 <meta property="og:site_name" content="灭God的技术博客">
 <meta property="og:description" content="本文章翻译自官方文档
 
-使用instancetype关键字作为方法的返回值，能够返回一个类的实例。比如alloc,init等方法。在一个合适的地方使用instancetype取代id将使你的代码更加安全。看下下面的代码：12345678910111213141516@interface MyObject : NSObject+ (instancetype)factoryMethodA;+ (id">
-<meta property="og:updated_time" content="2016-11-11T07:37:41.000Z">
+使用instancetype关键字作为方法的返回值，能够返回一个类的实例。比如alloc,init等方法。在一个合适的地方使用instancetype取代id将使你的代码更加安全。看下下面的代码：">
+<meta property="og:updated_time" content="2016-11-14T06:11:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="instancetype">
 <meta name="twitter:description" content="本文章翻译自官方文档
 
-使用instancetype关键字作为方法的返回值，能够返回一个类的实例。比如alloc,init等方法。在一个合适的地方使用instancetype取代id将使你的代码更加安全。看下下面的代码：12345678910111213141516@interface MyObject : NSObject+ (instancetype)factoryMethodA;+ (id">
+使用instancetype关键字作为方法的返回值，能够返回一个类的实例。比如alloc,init等方法。在一个合适的地方使用instancetype取代id将使你的代码更加安全。看下下面的代码：">
 
 
 
@@ -331,8 +331,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-11T15:37:41+08:00">
-              2016-11-11
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-14T14:11:37+08:00">
+              2016-11-14
             </time>
             
           </span>
@@ -373,7 +373,8 @@
         <blockquote>
 <p>本文章翻译自官方文档</p>
 </blockquote>
-<p>使用<code>instancetype</code>关键字作为方法的返回值，能够返回一个类的实例。比如<code>alloc</code>,<code>init</code>等方法。<br>在一个合适的地方使用<code>instancetype</code>取代<code>id</code>将使你的代码更加安全。看下下面的代码：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MyObject</span> : <span class="title">NSObject</span></span></span><br><span class="line">+ (instancetype)factoryMethodA;</span><br><span class="line">+ (<span class="keyword">id</span>)factoryMethodB;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">MyObject</span></span></span><br><span class="line">+ (instancetype)factoryMethodA &#123; <span class="keyword">return</span> [[[<span class="keyword">self</span> class] alloc] init]; &#125;</span><br><span class="line">+ (<span class="keyword">id</span>)factoryMethodB &#123; <span class="keyword">return</span> [[[<span class="keyword">self</span> class] alloc] init]; &#125;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">void</span> doSomething() &#123;</span><br><span class="line">    <span class="built_in">NSUInteger</span> x, y;</span><br><span class="line"> </span><br><span class="line">    x = [[MyObject factoryMethodA] count]; <span class="comment">// Return type of +factoryMethodA is taken to be "MyObject *"</span></span><br><span class="line">    y = [[MyObject factoryMethodB] count]; <span class="comment">// Return type of +factoryMethodB is "id"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用<code>instancetype</code>关键字作为方法的返回值，能够返回一个类的实例。比如<code>alloc</code>,<code>init</code>等方法。<br>在一个合适的地方使用<code>instancetype</code>取代<code>id</code>将使你的代码更加安全。看下下面的代码：<br><a id="more"></a></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MyObject</span> : <span class="title">NSObject</span></span></span><br><span class="line">+ (instancetype)factoryMethodA;</span><br><span class="line">+ (<span class="keyword">id</span>)factoryMethodB;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">MyObject</span></span></span><br><span class="line">+ (instancetype)factoryMethodA &#123; <span class="keyword">return</span> [[[<span class="keyword">self</span> class] alloc] init]; &#125;</span><br><span class="line">+ (<span class="keyword">id</span>)factoryMethodB &#123; <span class="keyword">return</span> [[[<span class="keyword">self</span> class] alloc] init]; &#125;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">void</span> doSomething() &#123;</span><br><span class="line">    <span class="built_in">NSUInteger</span> x, y;</span><br><span class="line"> </span><br><span class="line">    x = [[MyObject factoryMethodA] count]; <span class="comment">// Return type of +factoryMethodA is taken to be "MyObject *"</span></span><br><span class="line">    y = [[MyObject factoryMethodB] count]; <span class="comment">// Return type of +factoryMethodB is "id"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>方法<code>+factoryMethodA</code>的返回值是<code>instancetype</code>类型，即<code>MyObject *</code>类型。由于<code>MyObject</code>这个类没有<code>-count</code>这个方法，所以编译器会在<code>x</code>行给出这么一个警告：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">main.m: ’MyObject’ may not respond to ‘count’</span><br></pre></td></tr></table></figure></p>
 <p>然而，由于方法<code>+factoryMethodB</code>的返回值是<code>id</code>类型，所以编译器在<code>y</code>行没有任何警告。</p>
 <p>还有下面这个例子：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MyObjectSubclass</span> : <span class="title">MyObject</span></span></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">void</span> doSomethingElse() &#123;</span><br><span class="line">        <span class="built_in">NSString</span> *aString = [MyObjectSubclass factoryMethodA];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>

@@ -97,7 +97,7 @@
 
 问题来源今天下载了Coding源码，打算研究一下。按照提示执行了脚本之后发现，还是会报这么一个错误：123diff: /../Podfile.lock: No such file or directorydiff: /Manifest.lock: No such file or directoryerror: The">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/852660-077dd1adbadf3b16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-11-11T07:17:42.000Z">
+<meta property="og:updated_time" content="2016-11-14T06:11:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CocoaPods报错问题">
 <meta name="twitter:description" content="使用CocoaPods管理第三方框架非常方便，但是有时候也会出现一些问题。
@@ -333,8 +333,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-11T15:17:42+08:00">
-              2016-11-11
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-14T14:11:23+08:00">
+              2016-11-14
             </time>
             
           </span>
@@ -376,6 +376,7 @@
 <p>使用CocoaPods管理第三方框架非常方便，但是有时候也会出现一些问题。</p>
 </blockquote>
 <h1 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h1><p>今天下载了<a href="https://github.com/Coding/Coding-iOS.git" target="_blank" rel="external">Coding</a>源码，打算研究一下。按照提示执行了脚本之后发现，还是会报这么一个错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">diff: /../Podfile.lock: No such file or directory</span><br><span class="line">diff: /Manifest.lock: No such file or directory</span><br><span class="line">error: The sandbox is not in sync with the Podfile.lock. Run &apos;pod install&apos; or update your CocoaPods installation.</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>于是我就重新<code>pod install</code>发现还是不行，接着就是各种<code>Google</code>，然后找到了<a href="http://stackoverflow.com/questions/17072396/cocoapods-errors-on-project-build" target="_blank" rel="external">这种方法</a>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//先把项目的Myproject.workspeace删除</span><br><span class="line">rm -rf MyProject.xcworkspace</span><br><span class="line">//再重新pod </span><br><span class="line">pod install</span><br></pre></td></tr></table></figure></p>
 <p>按照步骤执行了之后，发现还是不行。（但是好像是有的人这么解决就可以。）</p>
 <p>然后我发现在<code>pod install</code>的时候，终端会有这么两个提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[!] CocoaPods did not set the base configuration of your project because your project already has a custom config set. In order for CocoaPods integration to work at all, please either set the base configurations of the target `Coding_iOS` to `Pods/Target Support Files/Pods-Coding_iOS/Pods-Coding_iOS.debug.xcconfig` or include the `Pods/Target Support Files/Pods-Coding_iOS/Pods-Coding_iOS.debug.xcconfig` in your build configuration.</span><br><span class="line"></span><br><span class="line">[!] CocoaPods did not set the base configuration of your project because your project already has a custom config set. In order for CocoaPods integration to work at all, please either set the base configurations of the target `Coding_iOS` to `Pods/Target Support Files/Pods-Coding_iOS/Pods-Coding_iOS.release.xcconfig` or include the `Pods/Target Support Files/Pods-Coding_iOS/Pods-Coding_iOS.release.xcconfig` in your build configuration.</span><br></pre></td></tr></table></figure></p>

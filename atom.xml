@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hanwp.github.io/"/>
-  <updated>2016-11-11T07:23:11.000Z</updated>
+  <updated>2016-11-14T06:11:01.000Z</updated>
   <id>http://hanwp.github.io/</id>
   
   <author>
@@ -20,11 +20,12 @@
     <link href="http://hanwp.github.io/2016/11/10/%E5%A6%99%E6%B1%87/"/>
     <id>http://hanwp.github.io/2016/11/10/妙汇/</id>
     <published>2016-11-10T07:22:53.000Z</published>
-    <updated>2016-11-11T07:23:11.000Z</updated>
+    <updated>2016-11-14T06:11:01.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前一段时间一直在零碎的学习swift的知识点，由于公司项目没有用swift开发，所以就想着找个项目模仿一下，练习一下swift。</p>
 </blockquote>
+<a id="more"></a>
 <p>#效果图<br><img src="http://upload-images.jianshu.io/upload_images/852660-470944e57ae9631b.gif?imageMogr2/auto-orient/strip" alt="首页gif.gif"><br><img src="http://upload-images.jianshu.io/upload_images/852660-095a9a25c6da23b7.gif?imageMogr2/auto-orient/strip" alt="分类gif.gif"><br><img src="http://upload-images.jianshu.io/upload_images/852660-021879534e260af4.gif?imageMogr2/auto-orient/strip" alt="视野gif.gif"></p>
 <p>#注意<br>这里我就不写怎么从零模仿APP了，抓包呀这些，网上好多。<br>我没有和官方的做的一模一样，只是大概实现了几个页面，能到到练手swift的目的就好😁。具体逻辑就看代码吧：<a href="https://github.com/Hanwp/miaohui--swift" target="_blank" rel="external">代码地址</a>。</p>
 <blockquote>
@@ -37,7 +38,6 @@
       &lt;blockquote&gt;
 &lt;p&gt;前一段时间一直在零碎的学习swift的知识点，由于公司项目没有用swift开发，所以就想着找个项目模仿一下，练习一下swift。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;#效果图&lt;br&gt;&lt;img src=&quot;http://upload-images
     
     </summary>
     
@@ -51,11 +51,12 @@
     <link href="http://hanwp.github.io/2016/10/09/iOS10%E6%96%B0%E7%89%B9%E6%80%A7-UserNotifications%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://hanwp.github.io/2016/10/09/iOS10新特性-UserNotifications（二）/</id>
     <published>2016-10-09T08:30:01.000Z</published>
-    <updated>2016-11-11T07:39:35.000Z</updated>
+    <updated>2016-11-14T06:12:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p><a href="http://hanwp.github.io/2016/10/08/iOS10%E6%96%B0%E7%89%B9%E6%80%A7-UserNotifications/">上篇文章</a>主要介绍了新的通知框架的基本使用，这篇文章主要说一下<strong>多媒体通知</strong>和<strong>扩展</strong>。</p>
 </blockquote>
+<a id="more"></a>
 <h1 id="扩展（Notification-Extension）"><a href="#扩展（Notification-Extension）" class="headerlink" title="扩展（Notification Extension）"></a>扩展（Notification Extension）</h1><ul>
 <li>Notification Service Extension<br>收到远程推送通知之后，我们可以利用<strong>Notification Service Extension</strong>这个扩展进行通知的修改。<br><img src="http://upload-images.jianshu.io/upload_images/852660-ae96bdc6dcdb4c09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="un_service_extension.png"></li>
 </ul>
@@ -100,7 +101,8 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://hanwp.github.io/2016/10/08/iOS10%E6%96%B0%E7%89%B9%E6%80%A7-UserNotifications/&quot;&gt;上篇文章&lt;/a&gt;主要介绍了新的通知框架的基本使用，这篇文
+&lt;p&gt;&lt;a href=&quot;http://hanwp.github.io/2016/10/08/iOS10%E6%96%B0%E7%89%B9%E6%80%A7-UserNotifications/&quot;&gt;上篇文章&lt;/a&gt;主要介绍了新的通知框架的基本使用，这篇文章主要说一下&lt;strong&gt;多媒体通知&lt;/strong&gt;和&lt;strong&gt;扩展&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -112,7 +114,7 @@
     <link href="http://hanwp.github.io/2016/10/08/iOS10%E6%96%B0%E7%89%B9%E6%80%A7-UserNotifications/"/>
     <id>http://hanwp.github.io/2016/10/08/iOS10新特性-UserNotifications/</id>
     <published>2016-10-08T03:30:12.000Z</published>
-    <updated>2016-11-11T07:38:52.000Z</updated>
+    <updated>2016-11-14T06:11:57.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>iOS10增加了新的通知框架<code>UserNotifications</code>，整合了本地通知和APNS，新的API使用起来特别舒服。这篇文章就大概介绍一下新的框架。</p>
@@ -122,6 +124,7 @@
 <li>可以对通知更新、删除</li>
 <li>统一本地通知和APNS</li>
 </ul>
+<a id="more"></a>
 <h1 id="权限申请"><a href="#权限申请" class="headerlink" title="权限申请"></a>权限申请</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@import UserNotifications;</span><br><span class="line"><span class="comment">// 请求使用通知</span></span><br><span class="line">[[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert completionHandler:^(<span class="built_in">BOOL</span> granted, <span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line">       <span class="keyword">if</span> (granted) &#123;</span><br><span class="line">           <span class="comment">//用户同意使用通知</span></span><br><span class="line">       &#125;</span><br><span class="line">   &#125;];</span><br></pre></td></tr></table></figure>
 <p>第一次调用这个方法时，会弹出一个系统弹窗。<br><img src="http://upload-images.jianshu.io/upload_images/852660-bf32a6da0243c4c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="UNNotification_author.png"><br>要注意的是，一旦用户拒绝了这个请求，再次调用该方法也不会再进行弹窗，想要应用有机会接收到通知的话，用户必须自行前往系统的设置中为你的应用打开通知。</p>
 <p><strong>远程推送</strong></p>
@@ -162,7 +165,11 @@
       &lt;blockquote&gt;
 &lt;p&gt;iOS10增加了新的通知框架&lt;code&gt;UserNotifications&lt;/code&gt;，整合了本地通知和APNS，新的API使用起来特别舒服。这篇文章就大概介绍一下新的框架。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&quot;新的特性：&quot;&gt;&lt;a
+&lt;h4 id=&quot;新的特性：&quot;&gt;&lt;a href=&quot;#新的特性：&quot; class=&quot;headerlink&quot; title=&quot;新的特性：&quot;&gt;&lt;/a&gt;新的特性：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;通知可以附加图片、音频、视频&lt;/li&gt;
+&lt;li&gt;可以对通知更新、删除&lt;/li&gt;
+&lt;li&gt;统一本地通知和APNS&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -176,7 +183,7 @@
     <link href="http://hanwp.github.io/2016/09/29/iOS10%E6%9D%83%E9%99%90crash%E9%97%AE%E9%A2%98/"/>
     <id>http://hanwp.github.io/2016/09/29/iOS10权限crash问题/</id>
     <published>2016-09-29T03:10:16.000Z</published>
-    <updated>2016-11-11T07:37:53.000Z</updated>
+    <updated>2016-11-14T06:11:50.000Z</updated>
     
     <content type="html"><![CDATA[<p>一直以来苹果都特别注重用户的隐私问题，比如访问联系人和打开相册都会弹出一个提示，来征求用户的意见，iOS10更加完善了这方面的权限。</p>
 <blockquote>
@@ -186,6 +193,7 @@
 <blockquote>
 <p>Contacts, Calendar, Reminders, Photos, Bluetooth Sharing, Microphone, Camera, Location, Health, HomeKit, Media Library, Motion, CallKit, Speech Recognition, SiriKit, TV Provider.</p>
 </blockquote>
+<a id="more"></a>
 <p>否则就会造成崩溃，这是我没有加说明的情况下，试图访问图库的一个崩溃</p>
 <blockquote>
 <p>This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSPhotoLibraryUsageDescription key with a string value explaining to the user how the app uses this data.</p>
@@ -202,7 +210,12 @@
     
       &lt;p&gt;一直以来苹果都特别注重用户的隐私问题，比如访问联系人和打开相册都会弹出一个提示，来征求用户的意见，iOS10更加完善了这方面的权限。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;A significant change in iOS 10 is that you
+&lt;p&gt;&lt;strong&gt;A significant change in iOS 10 is that you must declare ahead of time any access to private data or your App will crash.&lt;/strong&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在访问下列信息的时候，需要在&lt;code&gt;info.plist&lt;/code&gt;文件里，加上访问说明。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Contacts, Calendar, Reminders, Photos, Bluetooth Sharing, Microphone, Camera, Location, Health, HomeKit, Media Library, Motion, CallKit, Speech Recognition, SiriKit, TV Provider.&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -216,12 +229,13 @@
     <link href="http://hanwp.github.io/2016/04/12/CocoaPods%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/"/>
     <id>http://hanwp.github.io/2016/04/12/CocoaPods报错问题/</id>
     <published>2016-04-12T02:14:39.000Z</published>
-    <updated>2016-11-11T07:17:42.000Z</updated>
+    <updated>2016-11-14T06:11:23.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>使用CocoaPods管理第三方框架非常方便，但是有时候也会出现一些问题。</p>
 </blockquote>
 <h1 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h1><p>今天下载了<a href="https://github.com/Coding/Coding-iOS.git" target="_blank" rel="external">Coding</a>源码，打算研究一下。按照提示执行了脚本之后发现，还是会报这么一个错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">diff: /../Podfile.lock: No such file or directory</span><br><span class="line">diff: /Manifest.lock: No such file or directory</span><br><span class="line">error: The sandbox is not in sync with the Podfile.lock. Run &apos;pod install&apos; or update your CocoaPods installation.</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>于是我就重新<code>pod install</code>发现还是不行，接着就是各种<code>Google</code>，然后找到了<a href="http://stackoverflow.com/questions/17072396/cocoapods-errors-on-project-build" target="_blank" rel="external">这种方法</a>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//先把项目的Myproject.workspeace删除</span><br><span class="line">rm -rf MyProject.xcworkspace</span><br><span class="line">//再重新pod </span><br><span class="line">pod install</span><br></pre></td></tr></table></figure></p>
 <p>按照步骤执行了之后，发现还是不行。（但是好像是有的人这么解决就可以。）</p>
 <p>然后我发现在<code>pod install</code>的时候，终端会有这么两个提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[!] CocoaPods did not set the base configuration of your project because your project already has a custom config set. In order for CocoaPods integration to work at all, please either set the base configurations of the target `Coding_iOS` to `Pods/Target Support Files/Pods-Coding_iOS/Pods-Coding_iOS.debug.xcconfig` or include the `Pods/Target Support Files/Pods-Coding_iOS/Pods-Coding_iOS.debug.xcconfig` in your build configuration.</span><br><span class="line"></span><br><span class="line">[!] CocoaPods did not set the base configuration of your project because your project already has a custom config set. In order for CocoaPods integration to work at all, please either set the base configurations of the target `Coding_iOS` to `Pods/Target Support Files/Pods-Coding_iOS/Pods-Coding_iOS.release.xcconfig` or include the `Pods/Target Support Files/Pods-Coding_iOS/Pods-Coding_iOS.release.xcconfig` in your build configuration.</span><br></pre></td></tr></table></figure></p>
@@ -240,7 +254,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;使用CocoaPods管理第三方框架非常方便，但是有时候也会出现一些问题。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&quot;问题来源&quot;&gt;&lt;a href=&quot;#问题来源&quot; class=&quot;headerlink&quot; title=&quot;问题来源&quot;&gt;&lt;/a&gt;问题
+&lt;h1 id=&quot;问题来源&quot;&gt;&lt;a href=&quot;#问题来源&quot; class=&quot;headerlink&quot; title=&quot;问题来源&quot;&gt;&lt;/a&gt;问题来源&lt;/h1&gt;&lt;p&gt;今天下载了&lt;a href=&quot;https://github.com/Coding/Coding-iOS.git&quot;&gt;Coding&lt;/a&gt;源码，打算研究一下。按照提示执行了脚本之后发现，还是会报这么一个错误：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;diff: /../Podfile.lock: No such file or directory&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;diff: /Manifest.lock: No such file or directory&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;error: The sandbox is not in sync with the Podfile.lock. Run &amp;apos;pod install&amp;apos; or update your CocoaPods installation.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
@@ -254,12 +268,13 @@
     <link href="http://hanwp.github.io/2016/04/09/instancetype/"/>
     <id>http://hanwp.github.io/2016/04/09/instancetype/</id>
     <published>2016-04-09T09:12:47.000Z</published>
-    <updated>2016-11-11T07:37:41.000Z</updated>
+    <updated>2016-11-14T06:11:37.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>本文章翻译自官方文档</p>
 </blockquote>
-<p>使用<code>instancetype</code>关键字作为方法的返回值，能够返回一个类的实例。比如<code>alloc</code>,<code>init</code>等方法。<br>在一个合适的地方使用<code>instancetype</code>取代<code>id</code>将使你的代码更加安全。看下下面的代码：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MyObject</span> : <span class="title">NSObject</span></span></span><br><span class="line">+ (instancetype)factoryMethodA;</span><br><span class="line">+ (<span class="keyword">id</span>)factoryMethodB;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">MyObject</span></span></span><br><span class="line">+ (instancetype)factoryMethodA &#123; <span class="keyword">return</span> [[[<span class="keyword">self</span> class] alloc] init]; &#125;</span><br><span class="line">+ (<span class="keyword">id</span>)factoryMethodB &#123; <span class="keyword">return</span> [[[<span class="keyword">self</span> class] alloc] init]; &#125;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">void</span> doSomething() &#123;</span><br><span class="line">    <span class="built_in">NSUInteger</span> x, y;</span><br><span class="line"> </span><br><span class="line">    x = [[MyObject factoryMethodA] count]; <span class="comment">// Return type of +factoryMethodA is taken to be "MyObject *"</span></span><br><span class="line">    y = [[MyObject factoryMethodB] count]; <span class="comment">// Return type of +factoryMethodB is "id"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用<code>instancetype</code>关键字作为方法的返回值，能够返回一个类的实例。比如<code>alloc</code>,<code>init</code>等方法。<br>在一个合适的地方使用<code>instancetype</code>取代<code>id</code>将使你的代码更加安全。看下下面的代码：<br><a id="more"></a></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MyObject</span> : <span class="title">NSObject</span></span></span><br><span class="line">+ (instancetype)factoryMethodA;</span><br><span class="line">+ (<span class="keyword">id</span>)factoryMethodB;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">MyObject</span></span></span><br><span class="line">+ (instancetype)factoryMethodA &#123; <span class="keyword">return</span> [[[<span class="keyword">self</span> class] alloc] init]; &#125;</span><br><span class="line">+ (<span class="keyword">id</span>)factoryMethodB &#123; <span class="keyword">return</span> [[[<span class="keyword">self</span> class] alloc] init]; &#125;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">void</span> doSomething() &#123;</span><br><span class="line">    <span class="built_in">NSUInteger</span> x, y;</span><br><span class="line"> </span><br><span class="line">    x = [[MyObject factoryMethodA] count]; <span class="comment">// Return type of +factoryMethodA is taken to be "MyObject *"</span></span><br><span class="line">    y = [[MyObject factoryMethodB] count]; <span class="comment">// Return type of +factoryMethodB is "id"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>方法<code>+factoryMethodA</code>的返回值是<code>instancetype</code>类型，即<code>MyObject *</code>类型。由于<code>MyObject</code>这个类没有<code>-count</code>这个方法，所以编译器会在<code>x</code>行给出这么一个警告：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">main.m: ’MyObject’ may not respond to ‘count’</span><br></pre></td></tr></table></figure></p>
 <p>然而，由于方法<code>+factoryMethodB</code>的返回值是<code>id</code>类型，所以编译器在<code>y</code>行没有任何警告。</p>
 <p>还有下面这个例子：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MyObjectSubclass</span> : <span class="title">MyObject</span></span></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">void</span> doSomethingElse() &#123;</span><br><span class="line">        <span class="built_in">NSString</span> *aString = [MyObjectSubclass factoryMethodA];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -276,7 +291,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;本文章翻译自官方文档&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;使用&lt;code&gt;instancetype&lt;/code&gt;关键字作为方法的返回值，能够返回一个类的实例。比如&lt;code&gt;alloc&lt;/code&gt;,&lt;code&gt;init&lt;/code&gt;等方法。
+&lt;p&gt;使用&lt;code&gt;instancetype&lt;/code&gt;关键字作为方法的返回值，能够返回一个类的实例。比如&lt;code&gt;alloc&lt;/code&gt;,&lt;code&gt;init&lt;/code&gt;等方法。&lt;br&gt;在一个合适的地方使用&lt;code&gt;instancetype&lt;/code&gt;取代&lt;code&gt;id&lt;/code&gt;将使你的代码更加安全。看下下面的代码：&lt;br&gt;
     
     </summary>
     
@@ -288,12 +303,12 @@
     <link href="http://hanwp.github.io/2016/04/01/%E6%89%87%E5%BD%A2%E5%9B%BE/"/>
     <id>http://hanwp.github.io/2016/04/01/扇形图/</id>
     <published>2016-04-01T03:07:15.000Z</published>
-    <updated>2016-11-11T07:37:14.000Z</updated>
+    <updated>2016-11-14T06:11:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。</p>
 </blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/852660-f5277c97c9b7a993.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/852660-f5277c97c9b7a993.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><a id="more"></a></p>
 <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>利用<code>CAShapeLayer</code>和<code>UIBezierPath</code>绘制。</p>
 <h1 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">CAShapeLayer</span> *circle = [<span class="built_in">CAShapeLayer</span> layer];</span><br><span class="line">circle.lineWidth = lineWidth1;</span><br><span class="line">circle.path = [<span class="built_in">UIBezierPath</span> bezierPathWithArcCenter:<span class="built_in">CGPointMake</span>(kScreenWidth/<span class="number">2</span>, kScreenHeight/<span class="number">2</span>) radius:raidus1 startAngle:<span class="number">0</span> endAngle:<span class="number">-2</span>*M_PI clockwise:<span class="literal">NO</span>].CGPath;</span><br><span class="line">    circle.strokeColor = [<span class="built_in">UIColor</span> whiteColor].CGColor;</span><br><span class="line">    circle.fillColor = [<span class="built_in">UIColor</span> lightGrayColor].CGColor;</span><br><span class="line">    [<span class="keyword">self</span>.view.layer addSublayer:circle];</span><br></pre></td></tr></table></figure>
 <p>有一点需要注意的是<code>lineWidth</code>这个属性设置了之后会有一半覆盖掉半径，也就是说半径是100的话，设置<code>lineWidth</code>为50的话，看到的效果是里面的半径是100-50/2=75.（我当时找了好久的原因才发现这个问题）</p>
@@ -306,7 +321,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upl
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/852660-f5277c97c9b7a993.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;br&gt;
     
     </summary>
     
@@ -320,9 +335,10 @@
     <link href="http://hanwp.github.io/2016/03/30/%E5%8D%95%E5%88%A9/"/>
     <id>http://hanwp.github.io/2016/03/30/单利/</id>
     <published>2016-03-30T07:02:14.000Z</published>
-    <updated>2016-11-11T08:08:40.000Z</updated>
+    <updated>2016-11-14T06:10:48.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>单利是一种设计模式，就是在应用程序生命周期中，只会创建一个对象实例。在保存用户的信息、数据管理者等需要使用到单利。系统也有一些单利的例子：<code>UIApplication</code>和<code>NSUserDefaults</code>等。</p>
+<a id="more"></a>
 <h1 id="创建方法"><a href="#创建方法" class="headerlink" title="创建方法"></a>创建方法</h1><ul>
 <li>利用<code>GCD</code>创建</li>
 </ul>
@@ -335,7 +351,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;单利是一种设计模式，就是在应用程序生命周期中，只会创建一个对象实例。在保存用户的信息、数据管理者等需要使用到单利。系统也有一些单利的例子：&lt;
+      &lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;单利是一种设计模式，就是在应用程序生命周期中，只会创建一个对象实例。在保存用户的信息、数据管理者等需要使用到单利。系统也有一些单利的例子：&lt;code&gt;UIApplication&lt;/code&gt;和&lt;code&gt;NSUserDefaults&lt;/code&gt;等。&lt;/p&gt;
     
     </summary>
     

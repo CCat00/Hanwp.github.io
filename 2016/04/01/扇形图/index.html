@@ -86,30 +86,18 @@
 
 
 
-<meta name="description" content="项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。
-
-
-原理利用CAShapeLayer和UIBezierPath绘制。
-主要代码123456CAShapeLayer *circle = [CAShapeLayer layer];circle.lineWidth = lineWidth1;circle.path = [UIBezie">
+<meta name="description" content="项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="扇形图">
 <meta property="og:url" content="http://hanwp.github.io/2016/04/01/扇形图/index.html">
 <meta property="og:site_name" content="灭God的技术博客">
-<meta property="og:description" content="项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。
-
-
-原理利用CAShapeLayer和UIBezierPath绘制。
-主要代码123456CAShapeLayer *circle = [CAShapeLayer layer];circle.lineWidth = lineWidth1;circle.path = [UIBezie">
+<meta property="og:description" content="项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/852660-f5277c97c9b7a993.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/852660-50421d8b23f53e37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-11-11T07:37:14.000Z">
+<meta property="og:updated_time" content="2016-11-14T06:11:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="扇形图">
-<meta name="twitter:description" content="项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。
-
-
-原理利用CAShapeLayer和UIBezierPath绘制。
-主要代码123456CAShapeLayer *circle = [CAShapeLayer layer];circle.lineWidth = lineWidth1;circle.path = [UIBezie">
+<meta name="twitter:description" content="项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/852660-f5277c97c9b7a993.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -340,8 +328,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-11T15:37:14+08:00">
-              2016-11-11
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-14T14:11:13+08:00">
+              2016-11-14
             </time>
             
           </span>
@@ -382,7 +370,7 @@
         <blockquote>
 <p>项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。</p>
 </blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/852660-f5277c97c9b7a993.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/852660-f5277c97c9b7a993.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><a id="more"></a></p>
 <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>利用<code>CAShapeLayer</code>和<code>UIBezierPath</code>绘制。</p>
 <h1 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">CAShapeLayer</span> *circle = [<span class="built_in">CAShapeLayer</span> layer];</span><br><span class="line">circle.lineWidth = lineWidth1;</span><br><span class="line">circle.path = [<span class="built_in">UIBezierPath</span> bezierPathWithArcCenter:<span class="built_in">CGPointMake</span>(kScreenWidth/<span class="number">2</span>, kScreenHeight/<span class="number">2</span>) radius:raidus1 startAngle:<span class="number">0</span> endAngle:<span class="number">-2</span>*M_PI clockwise:<span class="literal">NO</span>].CGPath;</span><br><span class="line">    circle.strokeColor = [<span class="built_in">UIColor</span> whiteColor].CGColor;</span><br><span class="line">    circle.fillColor = [<span class="built_in">UIColor</span> lightGrayColor].CGColor;</span><br><span class="line">    [<span class="keyword">self</span>.view.layer addSublayer:circle];</span><br></pre></td></tr></table></figure>
 <p>有一点需要注意的是<code>lineWidth</code>这个属性设置了之后会有一半覆盖掉半径，也就是说半径是100的话，设置<code>lineWidth</code>为50的话，看到的效果是里面的半径是100-50/2=75.（我当时找了好久的原因才发现这个问题）</p>
