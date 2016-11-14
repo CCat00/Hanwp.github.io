@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hanwp.github.io/"/>
-  <updated>2016-11-14T06:29:46.000Z</updated>
+  <updated>2016-11-14T07:20:00.000Z</updated>
   <id>http://hanwp.github.io/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://hanwp.github.io/2016/11/10/%E5%A6%99%E6%B1%87/"/>
     <id>http://hanwp.github.io/2016/11/10/妙汇/</id>
     <published>2016-11-10T07:22:53.000Z</published>
-    <updated>2016-11-14T06:29:46.000Z</updated>
+    <updated>2016-11-14T07:20:00.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前一段时间一直在零碎的学习swift的知识点，由于公司项目没有用swift开发，所以就想着找个项目模仿一下，练习一下swift。</p>
 </blockquote>
 <a id="more"></a>
-<p>#效果图<br><img src="http://upload-images.jianshu.io/upload_images/852660-470944e57ae9631b.gif?imageMogr2/auto-orient/strip" alt="首页gif.gif"><br><img src="http://upload-images.jianshu.io/upload_images/852660-095a9a25c6da23b7.gif?imageMogr2/auto-orient/strip" alt="分类gif.gif"><br><img src="http://upload-images.jianshu.io/upload_images/852660-021879534e260af4.gif?imageMogr2/auto-orient/strip" alt="视野gif.gif"></p>
-<p>#注意<br>这里我就不写怎么从零模仿APP了，抓包呀这些，网上好多。<br>我没有和官方的做的一模一样，只是大概实现了几个页面，能到到练手swift的目的就好😁。具体逻辑就看代码吧：<a href="https://github.com/Hanwp/miaohui--swift" target="_blank" rel="external">代码地址</a>。</p>
+<h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="http://upload-images.jianshu.io/upload_images/852660-470944e57ae9631b.gif?imageMogr2/auto-orient/strip" alt="首页gif.gif"><br><img src="http://upload-images.jianshu.io/upload_images/852660-095a9a25c6da23b7.gif?imageMogr2/auto-orient/strip" alt="分类gif.gif"><br><img src="http://upload-images.jianshu.io/upload_images/852660-021879534e260af4.gif?imageMogr2/auto-orient/strip" alt="视野gif.gif"></p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>这里我就不写怎么从零模仿APP了，抓包呀这些，网上好多。<br>我没有和官方的做的一模一样，只是大概实现了几个页面，能到到练手swift的目的就好😁。具体逻辑就看代码吧：<a href="https://github.com/Hanwp/miaohui--swift" target="_blank" rel="external">代码地址</a>。</p>
 <blockquote>
 <p>有什么问题欢迎给我留言~</p>
 </blockquote>
@@ -45,6 +45,8 @@
     
     
       <category term="iOS" scheme="http://hanwp.github.io/tags/iOS/"/>
+    
+      <category term="Swift" scheme="http://hanwp.github.io/tags/Swift/"/>
     
   </entry>
   
