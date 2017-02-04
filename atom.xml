@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hanwp.github.io/"/>
-  <updated>2017-02-04T02:38:09.000Z</updated>
+  <updated>2017-02-04T02:48:51.000Z</updated>
   <id>http://hanwp.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>UITableView侧滑</title>
+    <title>UITableViewCell侧滑</title>
     <link href="http://hanwp.github.io/2017/02/04/UITableViewCell%E4%BE%A7%E6%BB%91/"/>
     <id>http://hanwp.github.io/2017/02/04/UITableViewCell侧滑/</id>
     <published>2017-02-04T02:01:08.000Z</published>
-    <updated>2017-02-04T02:38:09.000Z</updated>
+    <updated>2017-02-04T02:48:51.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>UITableViewCell的侧滑可以很方便的进行一些操作，比如删除、标记等等，有一个很好用的第三方库<a href="https://github.com/CEWendel/SWTableViewCell" target="_blank" rel="external">SWTableViewCell</a>，可以帮助我们快速实现Cell的左滑和右滑，这个库有详细的使用说明，这里就不多说了。但是有些时候，我们不想只为了某一个界面就导入这么一个库，我们也可以使用系统自带实现一些简单的侧滑。</p>
 <p><img src="https://camo.githubusercontent.com/c138fcd3df24ae1d91f8bf6feb51a1cf111606a4/687474703a2f2f692e696d6775722e636f6d2f6e6a4b436a4b382e676966" alt="效果图"></p>
