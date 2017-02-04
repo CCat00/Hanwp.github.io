@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hanwp.github.io/"/>
-  <updated>2016-11-25T07:36:01.000Z</updated>
+  <updated>2017-02-04T02:38:09.000Z</updated>
   <id>http://hanwp.github.io/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UITableView侧滑</title>
+    <link href="http://hanwp.github.io/2017/02/04/UITableView%E4%BE%A7%E6%BB%91/"/>
+    <id>http://hanwp.github.io/2017/02/04/UITableView侧滑/</id>
+    <published>2017-02-04T02:01:08.000Z</published>
+    <updated>2017-02-04T02:38:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>UITableViewCell的侧滑可以很方便的进行一些操作，比如删除、标记等等，有一个很好用的第三方库<a href="https://github.com/CEWendel/SWTableViewCell" target="_blank" rel="external">SWTableViewCell</a>，可以帮助我们快速实现Cell的左滑和右滑，这个库有详细的使用说明，这里就不多说了。但是有些时候，我们不想只为了某一个界面就导入这么一个库，我们也可以使用系统自带实现一些简单的侧滑。</p>
+<p><img src="https://camo.githubusercontent.com/c138fcd3df24ae1d91f8bf6feb51a1cf111606a4/687474703a2f2f692e696d6775722e636f6d2f6e6a4b436a4b382e676966" alt="效果图"></p>
+<a id="more"></a>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="iOS8之前"><a href="#iOS8之前" class="headerlink" title="iOS8之前"></a>iOS8之前</h2><p>在iOS8以前我们可以通过实现UITableView下面的代理方法就可以实现一个简单的侧滑，但是这种只能有一个按钮，比较局限。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)tableView:(<span class="built_in">UITableView</span> *)tableView canEditRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView commitEditingStyle:(<span class="built_in">UITableViewCellEditingStyle</span>)editingStyle forRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">BOOL</span>)tableView:(<span class="built_in">UITableView</span> *)tableView canMoveRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSString</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath </span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">@"删除"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="iOS8开始系统提供了UITableViewRowAction"><a href="#iOS8开始系统提供了UITableViewRowAction" class="headerlink" title="iOS8开始系统提供了UITableViewRowAction"></a>iOS8开始系统提供了UITableViewRowAction</h2><p>只需要实现下面这个代理方法就可以了，返回的是UITableViewRowAction数组，可以实现多个按钮。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (nullable <span class="built_in">NSArray</span>&lt;<span class="built_in">UITableViewRowAction</span> *&gt; *)tableView:(<span class="built_in">UITableView</span> *)tableView editActionsForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">UITableViewRowAction</span> *cancle = [<span class="built_in">UITableViewRowAction</span> rowActionWithStyle:<span class="built_in">UITableViewRowActionStyleDefault</span> title:<span class="string">@"取消拉黑"</span> handler:^(<span class="built_in">UITableViewRowAction</span> * _Nonnull action, <span class="built_in">NSIndexPath</span> * _Nonnull indexPath) &#123;</span><br><span class="line">        </span><br><span class="line">		<span class="comment">// do something ...</span></span><br><span class="line">    &#125;];</span><br><span class="line">    cancle.backgroundColor = RGBCOLORV(<span class="number">0xdedede</span>);</span><br><span class="line">    <span class="keyword">return</span> @[cancle];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意这里有一个坑！在iOS8上面，只实现这个方法并不能侧滑，还需要加上下面这个方法，什么都不用实现就可以，这估  这是系统的bug。</p>
+</blockquote>
+  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// fixbug: 在iOS8.3真机上面，不重写这个方法，就无法左滑 </span></span><br><span class="line">- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView commitEditingStyle:(<span class="built_in">UITableViewCellEditingStyle</span>)editingStyle forRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果我们想要修改UITableViewRowAction的字体颜色，可以重写cell的<code>layoutsubviews</code>方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="built_in">UIView</span> *sbv <span class="keyword">in</span> <span class="keyword">self</span>.subviews) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">UIView</span> *sbv2 <span class="keyword">in</span> sbv.subviews) &#123;</span><br><span class="line">            <span class="built_in">NSString</span> *class_str = <span class="built_in">NSStringFromClass</span>([sbv2 class]);</span><br><span class="line">            <span class="comment">//NSLog(@"class_str = %@", class_str);</span></span><br><span class="line">            <span class="keyword">if</span> ([class_str rangeOfString:<span class="string">@"UITableViewCellActionButton"</span>].location != <span class="built_in">NSNotFound</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">UIView</span> *v <span class="keyword">in</span> sbv2.subviews) &#123;</span><br><span class="line">                    <span class="built_in">NSString</span> *class_str2 = <span class="built_in">NSStringFromClass</span>([v class]);</span><br><span class="line">                    <span class="comment">//NSLog(@"class_str2 = %@", class_str2);</span></span><br><span class="line">                    <span class="keyword">if</span> ([class_str2 rangeOfString:<span class="string">@"UIButtonLabel"</span>].location != <span class="built_in">NSNotFound</span>) &#123;</span><br><span class="line">                        <span class="built_in">UILabel</span> *l = (<span class="built_in">UILabel</span> *)v;</span><br><span class="line">                        <span class="comment">//NSLog(@"label = %@", l);</span></span><br><span class="line">                        l.textColor = ; <span class="comment">//你想要更改的颜色</span></span><br><span class="line">                        l.font = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">16</span>]; <span class="comment">//你想要的字体</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;UITableViewCell的侧滑可以很方便的进行一些操作，比如删除、标记等等，有一个很好用的第三方库&lt;a href=&quot;https://github.com/CEWendel/SWTableViewCell&quot;&gt;SWTableViewCell&lt;/a&gt;，可以帮助我们快速实现Cell的左滑和右滑，这个库有详细的使用说明，这里就不多说了。但是有些时候，我们不想只为了某一个界面就导入这么一个库，我们也可以使用系统自带实现一些简单的侧滑。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/c138fcd3df24ae1d91f8bf6feb51a1cf111606a4/687474703a2f2f692e696d6775722e636f6d2f6e6a4b436a4b382e676966&quot; alt=&quot;效果图&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="实用技巧" scheme="http://hanwp.github.io/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="iOS" scheme="http://hanwp.github.io/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>高仿今日头条分享界面的弹出动画</title>
@@ -360,7 +396,7 @@
     <link href="http://hanwp.github.io/2016/04/01/%E6%89%87%E5%BD%A2%E5%9B%BE/"/>
     <id>http://hanwp.github.io/2016/04/01/扇形图/</id>
     <published>2016-04-01T03:07:15.000Z</published>
-    <updated>2016-11-14T06:29:30.000Z</updated>
+    <updated>2017-02-04T02:09:12.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>项目中一个界面包含了扇形图，是下面这个样子。于是这里先写了一个简单的实现（是固定死的比例，以后再加比例就OK了）。</p>
