@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hanwp.github.io/"/>
-  <updated>2017-04-05T04:58:47.000Z</updated>
+  <updated>2017-04-05T05:13:57.000Z</updated>
   <id>http://hanwp.github.io/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://hanwp.github.io/2017/04/05/Vutrl%E6%90%AD%E5%BB%BAShadowSocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     <id>http://hanwp.github.io/2017/04/05/Vutrl搭建ShadowSocks科学上网/</id>
     <published>2017-04-05T03:30:12.000Z</published>
-    <updated>2017-04-05T04:58:47.000Z</updated>
+    <updated>2017-04-05T05:13:57.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前几天<a href="https://itunes.apple.com/cn/app/google-%E7%BF%BB%E8%AF%91-%E5%AE%9E%E7%8E%B0%E8%AF%AD%E9%9F%B3-%E6%8B%8D%E7%85%A7-%E6%89%8B%E5%86%99%E8%BE%93%E5%85%A5%E7%9A%84%E5%A4%9A%E5%9B%BD%E8%AF%AD%E8%A8%80%E5%8D%B3%E6%97%B6%E7%BF%BB%E8%AF%91%E5%BA%94%E7%94%A8-%E4%B8%8B%E8%BD%BD%E8%AF%AD%E8%A8%80%E5%8C%85%E7%A6%BB%E7%BA%BF%E7%8A%B6%E6%80%81%E4%B9%9F%E8%83%BD%E5%AE%9E%E6%97%B6%E7%BF%BB%E8%AF%91/id414706506?mt=8" target="_blank" rel="external">谷歌翻译APP</a>更新了5.8.0版本，并说明对中国优化，手机上终于可以不用挂<a href="http://baike.baidu.com/link?url=MdzHfCv0F9o_AKclt4hhz807qzN46K0imynVSJyG-v5M_x5nASXQ-rIrXJhByp7Tv5CYvkJe9c4ceC1dw-SCM5U8K3kMusjsTDxzCFWJQMQGBHWoyh3PMR9I5_v0FyE0X-8NPcqGXJFx9nqdHq5rh-G886uL8d15WvyojCscKlMilnsABFfMSV8XL3VVrahZ" target="_blank" rel="external">VPN</a>使用了。但是Google搜索服务目前还是不能使用，我之前是购买的云梯VPN服务，但是觉得不是很好使，有时链接不上，这又刚好到期了，于是就想着自己搭建一个VPS，科学上网。在这里记录一下。</p>
 </blockquote>
 <h1 id="VPS介绍"><a href="#VPS介绍" class="headerlink" title="VPS介绍"></a>VPS介绍</h1><ul>
 <li><strong>简介</strong>：VPS 是 Virtual private server（虚拟专用服务器）的缩写，指通过虚拟化技术在独立服务器中运行的专用服务器。每个使用VPS技术的虚拟独立服务器拥有各自独立的公网IP地址、操作系统、硬盘空间、内存空间、CPU资源等，还可以进行安装程序、重启服务器等操作，与运行一台独立服务器完全相同。说简单点，就是可以将一部真实的服务器中分割成多个不同的虚拟服务器，只是它们暴露给用户的感觉就像是一个独立的机器而已。</li>
-<li><strong>要求</strong>：本地要想科学上网，需要你的VPS能够翻墙，所以可以选择购买香港或者海外的服务器，国外的比如：<a href="https://cloud.digitalocean.com/" target="_blank" rel="external">DigitalOcean</a>、<a href="https://www.vultr.com" target="_blank" rel="external">Vutrl</a>、BandwagonHost(搬瓦工)。</li>
+<li><strong>要求</strong>：本地要想科学上网，需要你的VPS能够翻墙，所以可以选择购买香港或者海外的服务器，国外的比如：<a href="https://cloud.digitalocean.com/" target="_blank" rel="external">DigitalOcean</a>、<a href="https://www.vultr.com" target="_blank" rel="external">Vutrl</a>、BandwagonHost(搬瓦工)等等。</li>
 <li><p><strong>选择</strong>：</p>
 <ul>
 <li><a href="https://cloud.digitalocean.com/" target="_blank" rel="external">DigitalOcean</a>的我之前买过一次，选的是新加坡的服务器，ping也不高，但是不稳定，有时候ping不到（可能和我的联通宽带有关系）。</li>
@@ -35,22 +35,22 @@
 <li>BandwagonHost(搬瓦工)的没有买过不做评价。</li>
 </ul>
 <blockquote>
-<p>顺便说下：使用我的<a href="http://www.vultr.com/?ref=7140632" target="_blank" rel="external">优惠链接</a>注册并充值$10,我可以获得10$。如果觉得可以决定要使用的话，可以顺便帮我一下:)</p>
+<p>顺便说下：使用我的<a href="http://www.vultr.com/?ref=7140632" target="_blank" rel="external">优惠链接</a>注册并充值$10,可以奖励给我10$，所以如果觉得可以，并且决定要使用的话，可以顺便帮我一下:)</p>
 </blockquote>
 <a id="more"></a>
 </li>
 </ul>
 <h1 id="创建自己的VPS"><a href="#创建自己的VPS" class="headerlink" title="创建自己的VPS"></a>创建自己的VPS</h1><ul>
-<li>选择服务器的位置 <img src="../images/vultr_shadowsocks/服务器地址选择.png" alt="服务器地址选择"></li>
-<li>选择服务器的系统，这里选择CentOS或者Ubuntu的都可以，我选择的是Ubuntu14.04 x64 的系统。 <img src="../images/vultr_shadowsocks/服务器系统选择.png" alt="服务器系统选择"></li>
-<li>选择服务器的套餐 <img src="../images/vultr_shadowsocks/服务器套餐选择.png" alt="服务器套餐选择"></li>
+<li>选择服务器的位置 <img src="/images/vultr_shadowsocks/服务器地址选择.png" alt="服务器地址选择"></li>
+<li>选择服务器的系统，这里选择CentOS或者Ubuntu的都可以，我选择的是Ubuntu14.04 x64 的系统。 <img src="/images/vultr_shadowsocks/服务器系统选择.png" alt="服务器系统选择"></li>
+<li>选择服务器的套餐 <img src="/images/vultr_shadowsocks/服务器套餐选择.png" alt="服务器套餐选择"></li>
 </ul>
 <blockquote>
 <p>个人更推荐第一个套餐(2.5$一个月)，个人使用就足够了，我选的就是这个，但是在我写教程的时候，这个套餐暂时售空了！那好吧，那就买5$一个月的吧(可以和小伙伴合伙购买)。</p>
 </blockquote>
 <ul>
-<li>输入标签然后提交 <img src="../images/vultr_shadowsocks/服务器确定提交.png" alt="服务器确定提交"></li>
-<li>好了，在服务器列表就可以看到自己的服务器了！ <img src="../images/vultr_shadowsocks/服务器列表.png" alt="服务器列表"></li>
+<li>输入标签然后提交 <img src="/images/vultr_shadowsocks/服务器确定提交.png" alt="服务器确定提交"></li>
+<li>好了，在服务器列表就可以看到自己的服务器了！ <img src="/images/vultr_shadowsocks/服务器列表.png" alt="服务器列表"></li>
 </ul>
 <h1 id="搭建服务端ShadowSocks"><a href="#搭建服务端ShadowSocks" class="headerlink" title="搭建服务端ShadowSocks"></a>搭建服务端ShadowSocks</h1><ul>
 <li>首先Mac可以用终端SSH连接到你的服务器(ssh root@yourip)，win可以用软件，具体网上找下。</li>
@@ -74,7 +74,7 @@
 <blockquote>
 <p>停止运行： <code>ssserver -c /etc/shadowsocks.json -d stop</code></p>
 </blockquote>
-<h1 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h1><p>客户端安装比较简单，这里直接推荐<a href="https://github.com/shadowsocks/ShadowsocksX-NG" target="_blank" rel="external">ShadowsocksX-NG</a>，然后配置： <img src="../images/vultr_shadowsocks/客户端配置.png" alt="客户端配置"></p>
+<h1 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h1><p>客户端安装比较简单，这里直接推荐<a href="https://github.com/shadowsocks/ShadowsocksX-NG" target="_blank" rel="external">ShadowsocksX-NG</a>，然后配置： <img src="/images/vultr_shadowsocks/客户端配置.png" alt="客户端配置"></p>
 <p>iphone的话推荐：Wingy</p>
 <h1 id="锐速加速"><a href="#锐速加速" class="headerlink" title="锐速加速"></a>锐速加速</h1><p>锐速（serverspeeder），是一款TCP加速程序，能够增强VPS/服务器连接的稳定性，且有效的提高服务器的带宽利用率，进而提高访问速度。具体教程参考这里：<a href="https://blessing.studio/ubuntu-14-04-change-kernel-to-install-serverspeeder/" target="_blank" rel="external">Ubuntu 14.04 更换内核以安装锐速</a></p>
 <h1 id="搭建VPN"><a href="#搭建VPN" class="headerlink" title="搭建VPN"></a>搭建VPN</h1><p>上面只是搭建了SS代理，如果你需要终端也能翻墙，就需要搭建VPN了。可以参考这篇文章：<a href="https://quericy.me/blog/699/" target="_blank" rel="external">CentOS/Ubuntu一键安装IPSEC/IKEV2 VPN服务器</a></p>
@@ -87,7 +87,7 @@
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;VPS介绍&quot;&gt;&lt;a href=&quot;#VPS介绍&quot; class=&quot;headerlink&quot; title=&quot;VPS介绍&quot;&gt;&lt;/a&gt;VPS介绍&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;简介&lt;/strong&gt;：VPS 是 Virtual private server（虚拟专用服务器）的缩写，指通过虚拟化技术在独立服务器中运行的专用服务器。每个使用VPS技术的虚拟独立服务器拥有各自独立的公网IP地址、操作系统、硬盘空间、内存空间、CPU资源等，还可以进行安装程序、重启服务器等操作，与运行一台独立服务器完全相同。说简单点，就是可以将一部真实的服务器中分割成多个不同的虚拟服务器，只是它们暴露给用户的感觉就像是一个独立的机器而已。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;要求&lt;/strong&gt;：本地要想科学上网，需要你的VPS能够翻墙，所以可以选择购买香港或者海外的服务器，国外的比如：&lt;a href=&quot;https://cloud.digitalocean.com/&quot;&gt;DigitalOcean&lt;/a&gt;、&lt;a href=&quot;https://www.vultr.com&quot;&gt;Vutrl&lt;/a&gt;、BandwagonHost(搬瓦工)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要求&lt;/strong&gt;：本地要想科学上网，需要你的VPS能够翻墙，所以可以选择购买香港或者海外的服务器，国外的比如：&lt;a href=&quot;https://cloud.digitalocean.com/&quot;&gt;DigitalOcean&lt;/a&gt;、&lt;a href=&quot;https://www.vultr.com&quot;&gt;Vutrl&lt;/a&gt;、BandwagonHost(搬瓦工)等等。&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;选择&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://cloud.digitalocean.com/&quot;&gt;DigitalOcean&lt;/a&gt;的我之前买过一次，选的是新加坡的服务器，ping也不高，但是不稳定，有时候ping不到（可能和我的联通宽带有关系）。&lt;/li&gt;
@@ -95,7 +95,7 @@
 &lt;li&gt;BandwagonHost(搬瓦工)的没有买过不做评价。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;顺便说下：使用我的&lt;a href=&quot;http://www.vultr.com/?ref=7140632&quot;&gt;优惠链接&lt;/a&gt;注册并充值$10,我可以获得10$。如果觉得可以决定要使用的话，可以顺便帮我一下:)&lt;/p&gt;
+&lt;p&gt;顺便说下：使用我的&lt;a href=&quot;http://www.vultr.com/?ref=7140632&quot;&gt;优惠链接&lt;/a&gt;注册并充值$10,可以奖励给我10$，所以如果觉得可以，并且决定要使用的话，可以顺便帮我一下:)&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
